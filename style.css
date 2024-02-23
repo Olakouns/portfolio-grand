@@ -5,6 +5,11 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
+
+.nav{
+    position: absolute;
+}
+
 .color-FD5B02{
     color: #FD5B02;
 }
@@ -13,19 +18,33 @@ body {
     color: #D9D9D9;
 }
 
+.introduction{
+    height:  100vh !important;
+}
+
 .intro-section{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    position: relative;
+    height: 100%;
 }
 
 .name-side h1 {
     font-size: 90px;
     margin-bottom: 12px;
+    margin-top: 0;
+    position: relative;
 }
-
+/* 
 .name-side{
     position: relative;
+} */
+
+.image-side{
+    position: absolute;
+    z-index: -100;
+    opacity: 0;
 }
 .name-cicle{
     position: absolute;
@@ -33,7 +52,12 @@ body {
     height: 2rem;
     border-radius: 50%;
     background-color: #FD5B02;
-    bottom: 83px;
+    bottom: 31px;
     left: 188px;
     z-index: -100;
+}
+
+
+.name-side-action{
+    opacity: 0;
 }
