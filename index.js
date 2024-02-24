@@ -1,6 +1,6 @@
 // gsap.from(".name-side", { opacity: 1, y: 100, duration: 1 });
 
-gsap.registerPlugin(ScrollTrigger) 
+gsap.registerPlugin(ScrollTrigger)
 
 let tl = gsap.timeline({
     scrollTrigger: {
@@ -14,11 +14,14 @@ let tl = gsap.timeline({
 });
 
 tl.add('start')
-    .to(".name-side", { x: "-100%", duration: 5},  'start')
-    .to(".image-side", {opacity: 1, x: "60%", duration: 5}, 'start')
-    .fromTo(".name-side-action", { opacity: 0 , y: 100}, {opacity: 1, y: 0, duration: 5});
-
-// gsap.to(".box", {
-//     scrollTrigger: ".name-side", // start the animation when ".box" enters the viewport (once)
-//     x: 500,
-//   });
+    .fromTo(".name-side", { x: "-50%", y: "-50%", duration: 10 }, {
+        x: "-100%", y: "-50%", duration: 10, 
+        onUpdate: () => {
+            // document.getElementsByClassName("name-side")[0].style.left = "50%"
+        },
+        onComplete: () => {
+            // document.getElementsByClassName("name-side")[0].style["text-align"] = "left"
+        }
+    }, 'start')
+    .fromTo(".image-side", { opacity: 0, x: "-50%", y: "-50%", duration: 5 }, { opacity: 1, x: "0%", y: "-50%", duration: 5 }, 'start')
+    .fromTo(".name-side-action", { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 5 });

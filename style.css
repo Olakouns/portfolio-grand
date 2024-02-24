@@ -5,6 +5,11 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
+/* .pin-spacer{
+    width: 100% !important;
+    background-color: red;
+} */
+
 
 .nav{
     position: absolute;
@@ -24,10 +29,17 @@ body {
 
 .intro-section{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     height: 100%;
+}
+
+.name-side {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
 }
 
 .name-side h1 {
@@ -43,8 +55,16 @@ body {
 
 .image-side{
     position: absolute;
-    z-index: -100;
+    /* z-index: -100; */
     opacity: 0;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    /* transform: translate(-50%, -50%); */
+}
+
+.image-side img{
+    width: 100%;
 }
 .name-cicle{
     position: absolute;
@@ -53,7 +73,7 @@ body {
     border-radius: 50%;
     background-color: #FD5B02;
     bottom: 31px;
-    left: 188px;
+    left: 85px;
     z-index: -100;
 }
 
