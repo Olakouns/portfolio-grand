@@ -8,9 +8,9 @@ let tl = gsap.timeline({
     scrollTrigger: {
         trigger: ".introduction",
         start: "top top",
-        end: "+=1000",
+        end: "+=900 +=400",
         pin: true,
-        markers: true,
+        // markers: true,
         scrub: 1,
     }
 });
@@ -24,11 +24,11 @@ tl.add('start')
 let tl2 = gsap.timeline({
         scrollTrigger: {
             trigger: ".section-about",
-            start: "center center",
-            end: "bottom",
+            start: "center bottom",
+            end: "end +=800",
             pin: true,
             markers: true,
-            scrub: 1,
+            scrub: 1
         }
     });
 
