@@ -71,7 +71,8 @@ body {
     border-radius: 50%;
     background-color: #FD5B02;
     bottom: 31px;
-    left: 85px;
+    /* left: 85px; */
+    right: 72px;
     z-index: -100;
 }
 
@@ -173,6 +174,7 @@ body {
 .section-about-h1{
     text-align: center;
     color: #FD5B02;
+    font-size: 48px;
 }
 
 .section-about-content {
@@ -182,4 +184,82 @@ body {
 
 .section-about-content p {
     width: 45%;
+}
+
+.section-project{
+    margin-top: 48px;
+}
+
+.section-project h1{
+    text-align: center;
+    color: #FD5B02;
+    font-size: 48px;
+}
+
+.row-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.row-item {
+    background-color: #252429;
+    padding: 16px 28px;
+    width: 24%;
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.row-item-s-1{
+    display: flex;
+    align-items: center;
+}
+
+.row-item-s-1 img {
+    margin-right: 16px;
+}
+
+.row-item-s-2 p{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.row-item-s-2-span-1 {
+    font-weight: normal;
+    color: #FD5B02;
+}
+.row-item-s-3-span-2{
+    font-weight: normal;
+}
+
+.tagger-top{
+    background-color: #FD5B02;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 60%;
+    width: 7px;
+}
+
+.view-pj{
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-left: 1px solid #FD5B02;
+    color: #FD5B02;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.view-pj img {
+    margin-left: 12px;
+}
+
+.view-pj:hover {
+    border: 1px solid #FD5B02;
+}
+
+.row-item-action {
+    display: flex; 
+    justify-content: end;
 }
